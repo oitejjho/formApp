@@ -1,0 +1,37 @@
+<div class="form-horizontal">
+    <br/>
+    <div class="form-group">
+        <label class="control-label col-sm-2">Form Name:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" style="width:200px" ng-model="form.name"
+                   placeholder="Enter form name"
+            />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="form-horizontal">
+            <div id="elementTypeDiv" class="col-12">
+
+            </div>
+            <div class="control-label col-12">
+                <div class="col-sm-offset-8 col-sm-4">
+                    <a class="btn btn-warning" ng-href="#/">
+                        <span>Back</span>
+                    </a>
+                    <a class="btn btn-primary" ng-click="addElement()">
+                        <span>New Element</span>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-primary" ng-click="OnSave(form)">Submit</button>
+        </div>
+    </div>
+</div>

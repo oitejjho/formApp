@@ -1,0 +1,39 @@
+<div class="form-horizontal">
+    <br/>
+    <div class="form-group">
+        <div class="col-sm-offset-10 col-sm-2">
+            <a class="btn btn-primary" ng-href="#/create">Create New Form</a>
+        </div>
+    </div>
+    <div class="col-12">
+        <table class="table table-striped table-bordered table-hover table-condensed">
+            <tbody>
+            <tr>
+                <td>Form Name</td>
+                <td>Total Items</td>
+                <td>Details</td>
+
+
+            </tr>
+            <tr ng-repeat="form in forms">
+                <td>{{form.schema.title}}</td>
+                <td>{{form.form.length}}</td>
+                <td>
+                    <a class="btn btn-primary" ng-click="generate($index)">View Form</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-12" ng-show="schema && form">
+        <div class="col-12">
+            <form sf-schema="schema" sf-form="form" sf-model="model">
+            </form>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-10 col-sm-2">
+                <a class="btn btn-primary" ng-click="saveData(id)">Save user</a>
+            </div>
+        </div>
+    </div>
+</div>
